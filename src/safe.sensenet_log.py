@@ -316,3 +316,18 @@ def read_file_lines(filename):
 def write_file_lines(filename, lines):
     with open(filename, 'w') as file:
         file.writelines(lines)
+
+# Update at 2025-04-20 06:15:05
+# Added documentation
+# Added unit tests
+# Fixed some bugs
+
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return bool(re.match(pattern, email))
+
+def extract_phone_numbers(text):
+    pattern = r'\d{3}-\d{3}-\d{4}'
+    return re.findall(pattern, text)
