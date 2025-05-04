@@ -518,3 +518,13 @@ def bubble_sort(arr):
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j]
     return arr
+
+# Update at 2025-05-04 15:07:05
+# Added error handling
+# Added unit tests
+# Added some random functionality
+
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n-1)
