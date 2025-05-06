@@ -570,3 +570,15 @@ class Stack:
     
     def is_empty(self):
         return len(self.items) == 0
+
+# Update at 2025-05-07 07:32:29
+# Added some random functionality
+# Added error handling
+
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
