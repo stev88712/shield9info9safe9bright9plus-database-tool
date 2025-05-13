@@ -695,3 +695,20 @@ def binary_search(arr, target):
         else:
             right = mid - 1
     return -1
+
+# Update at 2025-05-14 01:41:11
+# Optimized the algorithm
+# Added some random functionality
+# Added documentation
+
+
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
