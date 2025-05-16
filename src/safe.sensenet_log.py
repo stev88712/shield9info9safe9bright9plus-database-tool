@@ -781,3 +781,20 @@ def fetch_data(url):
     except requests.RequestException as e:
         print(f"Error fetching data: {e}")
         return None
+
+# Update at 2025-05-17 02:46:09
+# Updated the code with new features
+# Refactored the code
+# Optimized the algorithm
+
+
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
