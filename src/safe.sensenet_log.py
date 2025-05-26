@@ -942,3 +942,14 @@ class Observer:
     def notify(self):
         for observer in self._observers:
             observer.update()
+
+# Update at 2025-05-26 10:21:14
+# Updated the code with new features
+# Refactored the code
+def is_prime(n):
+    if n < 2:
+        return False
+    for i in range(2, int(n ** 0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
