@@ -1291,3 +1291,20 @@ def is_prime(n):
         if n % i == 0:
             return False
     return True
+
+# Update at 2025-06-18 23:31:09
+# Fixed some bugs
+# Refactored the code
+# Added some random functionality
+
+
+import requests
+
+def fetch_data(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        return response.json()
+    except requests.RequestException as e:
+        print(f"Error fetching data: {e}")
+        return None
