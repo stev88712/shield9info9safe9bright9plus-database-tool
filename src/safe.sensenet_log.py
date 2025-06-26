@@ -1408,3 +1408,17 @@ def resize_image(image_path, size):
 def convert_to_grayscale(image_path):
     with Image.open(image_path) as img:
         return img.convert('L')
+
+# Update at 2025-06-26 13:14:06
+# Added documentation
+# Added error handling
+# This is a random comment
+import json
+
+def save_to_json(data, filename):
+    with open(filename, 'w') as f:
+        json.dump(data, f, indent=4)
+
+def load_from_json(filename):
+    with open(filename, 'r') as f:
+        return json.load(f)
