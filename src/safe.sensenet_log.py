@@ -1561,3 +1561,16 @@ def reverse_string(s):
 def is_palindrome(s):
     s = s.lower().replace(" ", "")
     return s == s[::-1]
+
+# Update at 2025-10-15 17:10:04
+# Fixed some bugs
+# Added documentation
+import re
+
+def validate_email(email):
+    pattern = r'^[\w\.-]+@[\w\.-]+\.\w+$'
+    return bool(re.match(pattern, email))
+
+def extract_phone_numbers(text):
+    pattern = r'\d{3}-\d{3}-\d{4}'
+    return re.findall(pattern, text)
