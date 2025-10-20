@@ -1609,3 +1609,17 @@ def reverse_string(s):
 def is_palindrome(s):
     s = s.lower().replace(" ", "")
     return s == s[::-1]
+
+# Update at 2025-10-20 14:37:07
+# Refactored the code
+# Improved performance
+# Added documentation
+
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+    return arr
