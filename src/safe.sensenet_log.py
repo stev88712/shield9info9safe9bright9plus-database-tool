@@ -1639,3 +1639,19 @@ def resize_image(image_path, size):
 def convert_to_grayscale(image_path):
     with Image.open(image_path) as img:
         return img.convert('L')
+
+# Update at 2025-10-22 22:18:04
+# Updated the code with new features
+# Refactored the code
+# Added documentation
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
